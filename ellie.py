@@ -34,7 +34,7 @@ def getLabelColor(labelId, labelJson):
 
 def getTasks():
     list = getList()
-    taskList = {}
+    taskList = []
     labelList = getLabelList()
     line = 0
 
@@ -49,8 +49,7 @@ def getTasks():
         taskLabelColor = getLabelColor(index['label'], labelList)
         tasks = {'name': taskName, 'status': taskStatus, 'label': taskLabel,
                  'labelColor': taskLabelColor}
-        taskList[line] = tasks
-        line = line + 1
+        taskList.append(tasks)
 
     # taskListJson = json.dumps(taskList)
     return taskList
