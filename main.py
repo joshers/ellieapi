@@ -3,6 +3,9 @@ from ellie import getTasks
 from fastapi import FastAPI, HTTPException
 import uvicorn
 import os
+import nest_asyncio
+
+nest_asyncio.apply()
 
 DFX_API_KEY = os.environ.get("DFX_API_KEY")
 app = FastAPI()
