@@ -23,4 +23,4 @@ def getTaskAPI(authkey: str):
     else:
         raise HTTPException(status_code=403, detail="Invalid auth key")
 
-uvicorn.run(app, host="0.0.0.0", port=5005)
+# uvicorn.run(app, host="0.0.0.0", port=5005)
